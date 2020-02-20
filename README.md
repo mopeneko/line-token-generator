@@ -7,7 +7,7 @@ Generate X-Line-Access header
 
 ### Android
 
-```
+```go
 package main
 
 import (
