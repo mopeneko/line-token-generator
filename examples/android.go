@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./android"
 	"fmt"
+	"github.com/mopeneko/line-token-generator/android"
 )
 
 func main() {
