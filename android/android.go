@@ -29,7 +29,7 @@ func GenerateToken(authKey string) string {
 }
 
 func generateIat() string {
-	unixTime := time.Now().Unix()
+	unixTime := time.Now().Unix() / 60
 	iat := fmt.Sprintf("iat: %s\n", unixTime)
 	return iat
 }
