@@ -36,7 +36,7 @@ func generateIat() string {
 
 func generateHmacIat(iat string, key []byte) string {
 	hasher := hmac.New(sha1.New, key)
-	io.WriteString(hasher, iat)
+	hasher.Write([]byte(iat))
 	mac := base64.StdEncoding.EncodeToString(hasher.Sum(nil))
 	return mac
 }
