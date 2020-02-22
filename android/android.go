@@ -18,7 +18,7 @@ func GenerateToken(authKey string) string {
 	splitedAuthKey:= strings.Split(authKey, ":")
 
 	mid := splitedAuthKey[0]
-	key := ([]byte)(splitedAuthKey[1])
+	key, _ := base64.StdEncoding.DecodeString(splitedAuthKey[1])
 
 	message := encodedIat + "."
 
